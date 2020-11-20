@@ -1,0 +1,20 @@
+#navbar {
+    background-color: #BF4141;
+    border-bottom: 15px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.title > h1 {
+    color: white;
+    margin-left: 16px;
+}
+
+.nav-buttons a {
+    color: white;
+    font-size: 18px;
+    margin-right: 16px;
+    text-decoration: none;
+}
