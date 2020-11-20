@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //const serverURL = "http://localhost:5000";
-const serverURL = "https://hackschool-fa20-bryce.herokuapp.com/"
+const serverURL = "https://hackschool-fa20-bryce.herokuapp.com"
 
 const API = {
     getPokemon: function() {
