@@ -8,13 +8,15 @@ router.get('/pokemon', async (req, res) => {
 });
 
 router.post('/pokemon', async (req, res) => {
-    const { name, description, type1, type2, image, moves } = req.body;
+    const { pokemon } = req.body;
+    const { name, description, type1, type2, image, moves } = pokemon;
+    console.log(name);
     if ((!name || !description || !type1 || !image || !moves) || moves.length > 4) {
         res.status(400).json({ error: 'Invalid input' });
     }
-    const newPokemon = {name, description, type1, type2, image, moves};
-    const pokemon = await Pokemon.create(newPokemon);
-    res.status(200).json({ pokemon: pokemon });
+    //const newPokemon = {name, description, type1, type2, image, moves};
+    const newPokemon = await Pokemon.create(pokemon);
+    res.status(200).json({ pokemon: newPokemon });
 });
 
 module.exports = router;
